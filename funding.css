@@ -1,0 +1,81 @@
+.funding .fund-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.28fr);
+  gap: clamp(2rem, 6vw, 5.5rem);
+  align-items: start;
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+.funding .fund-overview {
+  margin: 0;
+  padding: clamp(1.45rem, 3.5vw, 2.8rem);
+  background: #0a3025;
+  color: #f8f8f2;
+  border-radius: .25rem;
+}
+.funding .fund-overview figcaption, .funding .fund-head {
+  font-size: .8rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.funding .fund-overview figcaption { color: #e3ecdf; }
+.funding .fund-total {
+  margin: 1.7rem 0 2rem;
+  font-family: Georgia, serif;
+  font-size: clamp(4.5rem, 8vw, 7.3rem);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: -.075em;
+  color: #f8f8f2;
+}
+.funding .fund-total > span:first-child { font-size: .47em; vertical-align: .24em; margin-right: .1em; }
+.funding .fund-unit {
+  display: block;
+  font: 500 1.05rem/1.4 var(--sans, system-ui, sans-serif);
+  letter-spacing: .01em;
+  margin-top: .8rem;
+  color: #e3ecdf;
+}
+.funding .fund-track { display: flex; height: 1.55rem; border-radius: 2px; overflow: hidden; }
+.funding .fund-track .fund-ext { width: 76.6667%; background: #cfe789; border-right: 3px solid #0a3025; }
+.funding .fund-track .fund-int { flex: 1; background: repeating-linear-gradient(130deg, #8ab59a 0 3px, #bad2bc 3px 6px); }
+@keyframes kovi-funding-bar { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+@media (prefers-reduced-motion: no-preference) {
+  .funding.seen .fund-track { animation: kovi-funding-bar .8s cubic-bezier(.22,.65,.3,1) both; }
+}
+.funding .fund-legend { margin: 1rem 0 1.2rem; }
+.funding .fund-legend > div { display: flex; justify-content: space-between; gap: .5rem; padding: .27rem 0; align-items: baseline; }
+.funding .fund-legend dt, .funding .fund-legend dd { margin: 0; color: #f8f8f2; font-size: .98rem; }
+.funding .fund-legend dd { font-weight: 650; font-variant-numeric: tabular-nums; }
+.funding .fund-swatch { display: inline-block; width: .7rem; height: .7rem; margin-right: .5rem; }
+.funding .fund-swatch.external { background: #cfe789; }
+.funding .fund-swatch.institutional { background: repeating-linear-gradient(130deg, #8ab59a 0 2px, #bad2bc 2px 4px); }
+.funding .fund-source, .funding .fund-scope { color: #e0eadf; line-height: 1.55; }
+.funding .fund-source { margin: 0; font-size: .95rem; }
+.funding .fund-scope { border-top: 1px solid #456657; margin: 1.45rem 0 0; padding-top: 1rem; font-size: .83rem; }
+.funding .fund-head { display: flex; align-items: center; justify-content: space-between; color: #486354; border-bottom: 1px solid #a9b9a8; padding: 0 2.25rem .8rem 0; }
+.funding .fund-row { border-bottom: 1px solid #cbd4c6; }
+.funding .fund-row summary { padding: .94rem 0; cursor: pointer; list-style: none; display: grid; grid-template-columns: minmax(0, 1fr) max-content 1.25rem; align-items: center; gap: 1rem; }
+.funding .fund-row summary::-webkit-details-marker { display: none; }
+.funding .fund-row summary:focus-visible { outline: 2px solid #297850; outline-offset: .15rem; }
+.funding .fund-row summary:hover .fund-name { text-decoration: underline; text-underline-offset: .18em; }
+.funding .fund-name { color: #143b30; font-size: clamp(1.06rem, 1.7vw, 1.3rem); font-weight: 600; line-height: 1.3; }
+.funding .fund-name small { display: block; color: #4d6557; font: 400 .84rem/1.5 var(--sans, system-ui, sans-serif); margin-top: .18rem; }
+.funding .fund-amount { font-weight: 600; font-size: 1.06rem; color: #143b30; font-variant-numeric: tabular-nums; }
+.funding .fund-expand { height: 1.25rem; width: 1.25rem; display: grid; place-items: center; position: relative; }
+.funding .fund-expand::before, .funding .fund-expand::after { content: ""; position: absolute; display: block; width: .8rem; height: 1.4px; background: #40644e; }
+.funding .fund-expand::after { transform: rotate(90deg); }
+.funding .fund-row[open] .fund-expand::after { transform: rotate(0); }
+.funding .fund-detail { color: #274336; padding: 0 1.4rem 1.4rem 0; line-height: 1.6; }
+.funding .fund-detail p { margin: 0 0 .65rem; font-size: 1rem; }
+.funding .fund-detail a { color: #175636; font-weight: 600; text-decoration: underline; text-underline-offset: .18em; }
+.funding .fund-further { margin: 2.5rem 0 0; border-top: 1px solid #cbd4c6; padding-top: 1.55rem; display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.28fr); gap: clamp(2rem,6vw,5.5rem); }
+.funding .fund-further h3 { margin: 0; color: #143b30; font-size: 1.25rem; font-weight: 500; line-height: 1.25; }
+.funding .fund-further p { margin: 0; font-size: 1rem; line-height: 1.6; color: #375243; }
+@media (max-width: 740px) {
+  .funding .fund-grid, .funding .fund-further { grid-template-columns: 1fr; }
+  .funding .fund-further { gap: .65rem; }
+  .funding .fund-total { font-size: 5.25rem; margin: 1.15rem 0 1.4rem; }
+  .funding .fund-row summary { gap: .55rem; }
+  .funding .fund-head { padding-right: 1.8rem; }
+}

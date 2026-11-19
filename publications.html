@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b2d25">
+<title>Publications &amp; resources · Mallikarjuna Rao Kovi</title>
+<meta name="description" content="Browse research publications, preprints, datasets and software by plant geneticist Mallikarjuna Rao Kovi.">
+<link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Instrument Serif;src:url("./assets/fonts/InstrumentSerif-Regular.woff") format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:Instrument Serif;src:url("./assets/fonts/InstrumentSerif-Italic.woff") format("woff");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:DM Sans;src:url("./assets/fonts/DMSans.woff") format("woff");font-weight:100 1000;font-display:swap}
+
+:root{color-scheme:light;--paper:#f8f8f2;--ink:#183b31;--dark:#0b2d25;--lime:#d4ed85;--quiet:#526660;--rule:#cbd5c9}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1.5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.55 "DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+h1,h2,h3,p{margin:0}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.22em}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid #67913e;outline-offset:4px}
+[hidden]{display:none!important}
+.wrap{width:min(72rem,calc(100% - 4rem));margin:auto}
+.skip{position:absolute;left:1rem;top:-6rem;background:var(--lime);color:var(--dark);padding:.6rem 1rem;z-index:1}
+.skip:focus{top:1rem}
+header{background:var(--dark);color:var(--paper)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid #3b574e;min-height:4.75rem}
+.brand{font:1.4rem/1.2 "Instrument Serif",Georgia,serif;text-decoration:none}
+.back{font-size:.9375rem;color:var(--lime)}
+.hero{padding:clamp(3.5rem,7.5vw,6rem) 0 clamp(3rem,5vw,4.5rem)}
+h1,h2,h3{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(3.1rem,7.2vw,6.25rem);line-height:.98;letter-spacing:-.055em;max-width:11em;text-wrap:balance}
+h1 em{color:var(--lime);font-weight:400}
+.hero p{max-width:42rem;margin-top:1.45rem;font-size:clamp(1rem,1.7vw,1.2rem);color:#e5ede3;line-height:1.65}
+.hero-links{display:flex;gap:1.35rem;flex-wrap:wrap;margin-top:1.3rem;font-size:.9375rem;color:var(--lime)}
+.controls{padding:2.25rem 0 1rem;display:grid;grid-template-columns:minmax(14rem,1.5fr) minmax(14rem,1fr) minmax(7rem,.5fr);gap:1rem}
+label{display:block;font-size:.875rem;font-weight:600;margin:0 0 .45rem}
+input,select,button{font:inherit}
+input,select{color:var(--ink);background:#fff;width:100%;min-height:3rem;border:1px solid #8f9e93;border-radius:.35rem}
+input{padding:.65rem .85rem}
+select{appearance:none;padding:.65rem 2.4rem .65rem .8rem}
+.select-wrap{position:relative}
+.select-wrap::after{content:"";position:absolute;right:1rem;top:calc(50% - .3rem);height:.45rem;width:.45rem;transform:rotate(45deg);border:solid var(--ink);border-width:0 1.5px 1.5px 0;pointer-events:none}
+.control-status{display:flex;gap:1rem;align-items:center;min-height:2rem;color:var(--quiet);font-size:.94rem}
+button{border:0;background:none;color:var(--ink);padding:0;text-decoration:underline;text-underline-offset:.22em;cursor:pointer}
+.group{margin:3.3rem 0}
+.group-title{display:flex;align-items:baseline;gap:.8rem;border-bottom:1.5px solid var(--ink);padding-bottom:.8rem}
+h2{font-size:clamp(1.8rem,3.5vw,2.7rem);letter-spacing:-.045em;line-height:1.15}
+.total{font-variant-numeric:tabular-nums;font-size:.875rem;color:var(--quiet)}
+.records{list-style:none;margin:0;padding:0}
+.record{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:1rem;padding:1.35rem 0;border-bottom:1px solid var(--rule)}
+.year{font-family:ui-monospace,"Courier New",monospace;font-size:.875rem;color:var(--quiet);padding-top:.25rem}
+h3{font-size:clamp(1.6rem,2.6vw,2rem);line-height:1.26;letter-spacing:-.018em;max-width:54em}
+h3 a{text-decoration:none}
+.venue{margin-top:.38rem;color:var(--ink)}
+.authors{max-width:68rem;margin-top:.32rem;color:var(--quiet);font-size:.94rem}
+.role{font-size:.8rem;font-weight:600;margin-top:.45rem}
+.fallback-nav{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.empty{margin:3.5rem 0;font:1.5rem/1.5 "Instrument Serif",Georgia,serif}
+footer{border-top:1px solid var(--rule);padding:1.5rem 0 2.5rem;margin-top:3rem;font-size:.94rem}
+.foot{display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;color:var(--quiet)}
+@media(max-width:48rem){.wrap{width:calc(100% - 2.25rem)}.controls{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}.query{grid-column:1/-1}.record{grid-template-columns:3.4rem minmax(0,1fr);gap:.5rem}.top{min-height:4rem}.hero{padding:3.4rem 0}.brand{font-size:1.12rem}}
+@media(max-width:32rem){.record{display:block}.year{padding:0;margin-bottom:.35rem}.controls{gap:.75rem}.back{font-size:.875rem}.group{margin:2.4rem 0}.group-title{gap:.5rem}.controls select{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:#fff;color:#172b26;font-size:10pt}.wrap{width:100%}.top,.hero-links,.controls,.control-status,.back,.skip,footer,.fallback-nav{display:none!important}header{background:white;color:var(--ink)}h1{font-size:30pt}h1 em,.hero p{color:var(--ink)}.hero{padding:0 0 1rem}.group{margin:1rem 0}.record{break-inside:avoid;padding:.5rem 0}.year,.authors,.role,.venue{font-size:9pt}h3{font-size:12pt}.group-title{break-after:avoid}}
+</style></head><body>
+<a class="skip" href="#archive">Skip to publications</a>
+<header><div class="wrap top"><a class="brand" href="./index.html">Mallikarjuna Rao Kovi</a><a class="back" href="./index.html#publications">Back to profile</a></div>
+<div class="wrap hero"><h1>Publications <em>&amp; resources</em></h1>
+<p>My work spans rice genetics, winter adaptation in forage grasses, genomic prediction and nitrogen use efficiency.</p>
+<div class="hero-links"><a href="https://orcid.org/0000-0002-6088-7630">ORCID</a><a href="https://scholar.google.com/citations?user=lWq_JT8AAAAJ">Google Scholar</a></div>
+</div></header>
+<main id="archive" class="wrap" tabindex="-1">
+<div class="controls" id="controls" role="search" aria-label="Search and filter publications" hidden>
+<div class="query"><label for="search">Search the archive</label><input type="search" id="search" placeholder="Title, author, journal, topic or DOI"></div>
+<div><label for="type">Output type</label><div class="select-wrap"><select id="type"><option value="">All outputs</option><option value="articles">Journal articles</option><option value="chapters">Book chapters &amp; proceedings</option><option value="preprints">Current preprints &amp; manuscripts</option><option value="earlier">Earlier preprints</option><option value="datasets">Open datasets</option><option value="tools">Software &amp; databases</option></select></div></div>
+<div><label for="year">Year</label><div class="select-wrap"><select id="year"><option value="">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2013">2013</option><option value="2011">2011</option><option value="2010">2010</option></select></div></div>
+</div>
+<div class="control-status" id="control-status" hidden><span id="matches" role="status" aria-live="polite" aria-atomic="true"></span><button id="reset" type="button" hidden>Clear filters</button></div>
+<noscript><nav aria-label="Archive sections" class="fallback-nav"><a href="#articles">Journal articles</a> <a href="#chapters">Book chapters &amp; proceedings</a> <a href="#preprints">Current preprints &amp; manuscripts</a> <a href="#earlier">Earlier preprints</a> <a href="#datasets">Open datasets</a> <a href="#tools">Software &amp; databases</a></nav></noscript>
+<p class="empty" id="empty" hidden>No records match those filters.</p>
+  <section class="group" id="articles" aria-labelledby="head-articles">
+    <div class="group-title"><h2 id="head-articles">Journal articles</h2><span class="total">28</span></div>
+    <ul class="records">
+      <li class="record" data-year="2026" data-doi="10.1007/s00122-026-05371-x">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s00122-026-05371-x">Genomic selection in timothy (<i>Phleum pratense</i> L.): a comprehensive evaluation of prediction models, multi-trait strategies, and forward validation across Norwegian environments</a></h3>
+          <p class="venue">Theoretical and Applied Genetics 139: 262</p>
+          <p class="authors"><b>Kovi MR</b>, Pashapu AR, Amdahl H, Gylstrøm K, Windju S, Marum P, Alsheikh M, Rognli OA</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.1007/s00122-026-05270-1">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s00122-026-05270-1">Allele frequency and gene expression differences under key winter stresses in temporal populations of two timothy cultivars</a></h3>
+          <p class="venue">Theoretical and Applied Genetics 139: 161</p>
+          <p class="authors">Pashapu AR, Dalmannsdottir S, Jørgensen M, <b>Kovi MR</b>, Rognli OA</p>
+          <p class="role">Corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.1111/gfs.70076">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1111/gfs.70076">Freezing and ice encasement tolerance of Arctic timothy varieties after seed multiplication for one, two or three generations at lower latitudes</a></h3>
+          <p class="venue">Grass and Forage Science 81(3): e70076</p>
+          <p class="authors">Aamlid TS, Dalmannsdottir S, Hellton KH, Jørgensen M, Sturite I, Fossdal CG, Pashapu AR, <b>Kovi MR</b>, Amdahl H, Rognli OA</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.1016/j.stress.2026.101372">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.stress.2026.101372">Surviving under ice: gene expression changes during ice encasement in timothy (<i>Phleum pratense</i> L.) overlap with freezing and hypoxia stress responses</a></h3>
+          <p class="venue">Plant Stress 21: 101372</p>
+          <p class="authors">Pashapu AR, Dalmannsdottir S, Jørgensen M, Rognli OA, <b>Kovi MR</b></p>
+          <p class="role">Corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.1080/17429145.2026.2741937">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1080/17429145.2026.2741937">Growth under mild drought: transcriptomics comparison of perennial ryegrass genotypes with differential tolerance to water deficit</a></h3>
+          <p class="venue">Journal of Plant Interactions 21(1): 2741937</p>
+          <p class="authors">Sustek-Sánchez F, Pashapu AR, Kemešytė V, <b>Kovi MR</b>, Rognli OA, Sarmiento C, Rostoks N, Jaškūnė K</p>
+          <p class="role">Co-corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.1016/j.algal.2026.104985">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.algal.2026.104985">Responses of sugar kelp to higher light intensity: growth, gene expression and content of iodine, bromine and vanadium</a></h3>
+          <p class="venue">Algal Research 99: 104985</p>
+          <p class="authors">Ergon Å, <b>Kovi MR</b>, Goecke F, Pashapu AR, Haughom SOA, Aldridge D, Forbord S</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2025" data-doi="10.1016/j.ifacol.2025.11.802">
+        <div class="year">2025</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.ifacol.2025.11.802">Development of an IoT sensor-based system for soil monitoring: conceptual design and experiments</a></h3>
+          <p class="venue">IFAC-PapersOnLine 59(23): 291–296</p>
+          <p class="authors">Ferreira da Costa I, <b>Kovi MR</b>, Candea Leite A</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2024" data-doi="10.1111/ppl.14217">
+        <div class="year">2024</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1111/ppl.14217">Frost survival and gene expression in timothy (<i>Phleum pratense</i> L.) cultivars as affected by age and selection in diverse field environments</a></h3>
+          <p class="venue">Physiologia Plantarum 176(1): e14217</p>
+          <p class="authors">Pashapu AR, Dalmannsdottir S, Jørgensen M, Schubert M, Rognli OA, <b>Kovi MR</b></p>
+          <p class="role">Corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2024" data-doi="10.1016/j.stress.2024.100598">
+        <div class="year">2024</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.stress.2024.100598">Transcriptome profiling reveals insight into the cold response of perennial ryegrass genotypes with contrasting freezing tolerance</a></h3>
+          <p class="venue">Plant Stress 14: 100598</p>
+          <p class="authors">Pashapu AR, Statkevičiūtė G, Sustek-Sánchez F, <b>Kovi MR</b>, Rognli OA, Sarmiento C, Rostoks N, Jaškūnė K</p>
+          <p class="role">Corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2024" data-doi="10.3389/fpls.2024.1336461">
+        <div class="year">2024</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.3389/fpls.2024.1336461">Limited genetic diversity found among genotypes of the Entada landrace (<i>Ensete ventricosum</i> (Welw.) Cheesman) from Ethiopia</a></h3>
+          <p class="venue">Frontiers in Plant Science 15: 1336461</p>
+          <p class="authors">Haile AT, <b>Kovi MR</b>, Johnsen SS, Hvoslef-Eide T, Tesfaye B, Rognli OA</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2023" data-doi="10.1007/s10722-023-01683-9">
+        <div class="year">2023</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s10722-023-01683-9">Genetic diversity, population structure and selection signatures in enset (<i>Ensete ventricosum</i> (Welw.) Cheesman), an underutilized and key food security crop in Ethiopia</a></h3>
+          <p class="venue">Genetic Resources and Crop Evolution 71: 1159–1176 (online July 2023, issue dated 2024)</p>
+          <p class="authors">Haile AT, <b>Kovi MR</b>, Johnsen SS, Tesfaye B, Hvoslef-Eide T, Rognli OA</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2023" data-doi="10.1007/s10745-023-00442-9">
+        <div class="year">2023</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s10745-023-00442-9">&quot;People gathered by sorghum&quot;: cultural practices and sorghum diversity in northern Ethiopia</a></h3>
+          <p class="venue">Human Ecology 51: 923–935</p>
+          <p class="authors">Wendmu TA, Gebrelibanos TS, <b>Kovi MR</b>, Ring KH, de Boer HJ, Abera FA, Westengen OT</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2023" data-doi="10.3389/fpls.2023.1127532">
+        <div class="year">2023</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.3389/fpls.2023.1127532">Improving abiotic stress tolerance of forage grasses: prospects of using genome editing</a></h3>
+          <p class="venue">Frontiers in Plant Science 14: 1127532</p>
+          <p class="authors">Sustek-Sánchez F, Rognli OA, Rostoks N, Sõmera M, Jaškūnė K, <b>Kovi MR</b>, Statkevičiūtė G, Sarmiento C</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2021" data-doi="10.1111/gfs.12535">
+        <div class="year">2021</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1111/gfs.12535">Grass and legume breeding matching the future needs of European grassland farming</a></h3>
+          <p class="venue">Grass and Forage Science 76(2): 175–185</p>
+          <p class="authors">Rognli OA, Pecetti L, <b>Kovi MR</b>, Annicchiarico P</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2020" data-doi="10.1093/database/baaa046">
+        <div class="year">2020</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1093/database/baaa046">ForageGrassBase: molecular resource for the forage grass meadow fescue (<i>Festuca pratensis</i> Huds.)</a></h3>
+          <p class="venue">Database 2020: baaa046</p>
+          <p class="authors">Samy JKA, Rognli OA, <b>Kovi MR</b></p>
+          <p class="role">Corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2019" data-doi="10.1371/journal.pone.0218360">
+        <div class="year">2019</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1371/journal.pone.0218360"><i>Candida utilis</i> yeast as a functional protein source for Atlantic salmon (<i>Salmo salar</i> L.): local intestinal tissue and plasma proteome responses</a></h3>
+          <p class="venue">PLoS ONE 14(12): e0218360</p>
+          <p class="authors">Reveco-Urzua FE, Hofossæter M, <b>Kovi MR</b>, Mydland LT, Ånestad R, Sørby R, Press CM, Lagos L, Øverland M</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2017" data-doi="10.1038/srep44383">
+        <div class="year">2017</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1038/srep44383">De novo and reference transcriptome assembly of transcripts expressed during flowering provide insight into seed setting in tetraploid red clover</a></h3>
+          <p class="venue">Scientific Reports 7: 44383</p>
+          <p class="authors"><b>Kovi MR</b>, Amdahl H, Alsheikh M, Rognli OA</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2016" data-doi="10.1016/j.pbi.2016.07.006">
+        <div class="year">2016</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.pbi.2016.07.006">Freezing tolerance revisited: effects of variable temperatures on gene regulation in temperate grasses and legumes</a></h3>
+          <p class="venue">Current Opinion in Plant Biology 33: 140–146</p>
+          <p class="authors"><b>Kovi MR</b>, Ergon Å, Rognli OA</p>
+          <p class="role">Co-first author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2016" data-doi="10.1038/srep28702">
+        <div class="year">2016</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1038/srep28702">Global transcriptome changes in perennial ryegrass during early infection by pink snow mould</a></h3>
+          <p class="venue">Scientific Reports 6: 28702</p>
+          <p class="authors"><b>Kovi MR</b>, Abdelhalim M, Kunapareddy A, Ergon Å, Tronsmo AM, Brurberg MB, Hofgaard IS, Asp T, Rognli OA</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2016" data-doi="10.2135/cropsci2015.07.0441">
+        <div class="year">2016</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.2135/cropsci2015.07.0441">Seed yield of Norwegian and Swedish tetraploid red clover (<i>Trifolium pratense</i> L.) populations</a></h3>
+          <p class="venue">Crop Science 56(2): 603–612</p>
+          <p class="authors">Amdahl H, Aamlid TS, Ergon Å, <b>Kovi MR</b>, Marum P, Alsheikh M, Rognli OA</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2015" data-doi="10.3389/fpls.2015.00929">
+        <div class="year">2015</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.3389/fpls.2015.00929">Population structure, genetic variation, and linkage disequilibrium in perennial ryegrass populations divergently selected for freezing tolerance</a></h3>
+          <p class="venue">Frontiers in Plant Science 6: 929</p>
+          <p class="authors"><b>Kovi MR</b>, Fjellheim S, Sandve SR, Larsen A, Rudi H, Asp T, Kent MP, Rognli OA</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2015" data-doi="10.1007/s10681-015-1383-6">
+        <div class="year">2015</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s10681-015-1383-6">QTL mapping for thermo-sensitive heading date in rice</a></h3>
+          <p class="venue">Euphytica 205: 51–62</p>
+          <p class="authors"><b>Kovi MR</b>, Hu Y, Bai X, Xing Y</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2013" data-doi="10.1016/j.compbiolchem.2013.03.004">
+        <div class="year">2013</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1016/j.compbiolchem.2013.03.004">Expression patterns of photoperiod and temperature regulated heading date genes in <i>Oryza sativa</i></a></h3>
+          <p class="venue">Computational Biology and Chemistry 45: 36–41</p>
+          <p class="authors"><b>Kovi MR</b>, Sablok G, Bai X, Wendell M, Rognli OA, Yu H, Xing Y</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2011" data-doi="10.1007/s00122-011-1620-x">
+        <div class="year">2011</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s00122-011-1620-x">Candidacy of a chitin-inducible gibberellin-responsive gene for a major locus affecting plant height in rice that is closely linked to Green Revolution gene sd1</a></h3>
+          <p class="venue">Theoretical and Applied Genetics 123: 705–714</p>
+          <p class="authors"><b>Kovi MR</b>, Zhang Y, Yu S, Yang G, Yan W, Xing Y</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2011" data-doi="10.1007/s10681-010-0332-7">
+        <div class="year">2011</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s10681-010-0332-7">Impact of seasonal changes on spikelets per panicle, panicle length and plant height in rice (<i>Oryza sativa</i> L.)</a></h3>
+          <p class="venue">Euphytica 179: 319–331</p>
+          <p class="authors"><b>Kovi MR</b>, Bai X, Mao D, Xing Y</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2011" data-doi="10.1007/s12041-011-0057-y">
+        <div class="year">2011</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s12041-011-0057-y">Quantitative trait loci for rice yield-related traits using recombinant inbred lines derived from two diverse cultivars</a></h3>
+          <p class="venue">Journal of Genetics 90: 209–215</p>
+          <p class="authors">Bai XF, Luo LJ, Yan WH, <b>Kovi MR</b>, Xing YZ</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2010" data-doi="10.1007/s00122-009-1222-z">
+        <div class="year">2010</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/s00122-009-1222-z">Mapping and validation of quantitative trait loci for spikelets per panicle and 1,000-grain weight in rice (<i>Oryza sativa</i> L.)</a></h3>
+          <p class="venue">Theoretical and Applied Genetics 120: 933–942 (online December 2009)</p>
+          <p class="authors">Liu T, Shao D, <b>Kovi MR</b>, Xing Y</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2010" data-doi="10.1186/1471-2156-11-16">
+        <div class="year">2010</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1186/1471-2156-11-16">Genetic dissection of rice grain shape using a recombinant inbred line population derived from two contrasting parents and fine mapping a pleiotropic quantitative trait locus qGL7</a></h3>
+          <p class="venue">BMC Genetics 11: 16</p>
+          <p class="authors">Bai X, Luo L, Yan W, <b>Kovi MR</b>, Zhan W, Xing Y</p>
+          
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="group" id="chapters" aria-labelledby="head-chapters">
+    <div class="group-title"><h2 id="head-chapters">Book chapters &amp; proceedings</h2><span class="total">4</span></div>
+    <ul class="records">
+      <li class="record" data-year="2022" data-doi="10.1007/978-3-030-92174-3_33">
+        <div class="year">2022</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/978-3-030-92174-3_33">Genetic and genomic approaches for improved and sustainable brown algal cultivation</a></h3>
+          <p class="venue">In: Ranga Rao A, Ravishankar GA (eds) Sustainable Global Resources of Seaweeds, Volume 2. Springer, Cham, pp 615–633</p>
+          <p class="authors">Theodorou I, <b>Kovi MR</b>, Liang Z, Opsahl-Sorteberg HG</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2018" data-doi="10.1007/978-3-319-89578-9_1">
+        <div class="year">2018</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1007/978-3-319-89578-9_1">Utilization of genebank accessions to improve northern adaptation of perennial ryegrass (<i>Lolium perenne</i> L.)</a></h3>
+          <p class="venue">In: Brazauskas G, Statkevičiūtė G, Jonavičienė K (eds) Breeding Grasses and Protein Crops in the Era of Genomics. Springer, Cham, pp 3–8</p>
+          <p class="authors">Rognli OA, Aavola R, Aleliūnas A, Asp T, Brazauskas G, Gylstrøm KH, Helgadottir A, Isolahti M, <b>Kovi MR</b>, Kristjánsdóttir TA, Larsen AS, Marum P, Paina C, Persson C, Rancāne S</p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2016" data-doi="">
+        <div class="year">2016</div>
+        <div class="citation">
+          <h3><a href="https://www.europeangrassland.org/fileadmin/documents/Infos/Printed_Matter/Proceedings/EGF2016.pdf">Genome-wide allelic shifts in forage crops when grown at five diverse locations across Norway</a></h3>
+          <p class="venue">In: The multiple roles of grassland in the European bioeconomy. Proceedings of the 26th General Meeting of the European Grassland Federation, Trondheim, Norway, 4–8 September 2016. Grassland Science in Europe 21, pp 789–791</p>
+          <p class="authors"><b>Kovi MR</b>, Byrne S, Østrem L, Ergon Å, Marum P, Asp T, Rognli OA</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2013" data-doi="">
+        <div class="year">2013</div>
+        <div class="citation">
+          <h3><a href="https://www.routledge.com/Genetics-Genomics-and-Breeding-of-Forage-Crops/Cai-Yamada-Kole/p/book/9781482208108">Meadow fescue (<i>Festuca pratensis</i> Huds.)</a></h3>
+          <p class="venue">In: Cai H, Yamada T, Kole C (eds) Genetics, Genomics and Breeding of Forage Crops. CRC Press, Boca Raton, chapter 5</p>
+          <p class="authors"><b>Kovi MR</b>, Rognli OA</p>
+          <p class="role">First author</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="group" id="preprints" aria-labelledby="head-preprints">
+    <div class="group-title"><h2 id="head-preprints">Current preprints &amp; manuscripts</h2><span class="total">4</span></div>
+    <ul class="records">
+      <li class="record" data-year="2026" data-doi="10.64898/2026.10.12.758384">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.64898/2026.10.12.758384">A constitutively active cortical nitrate-uptake cell state underlies nitrogen-use efficiency in perennial ryegrass</a></h3>
+          <p class="venue">bioRxiv preprint</p>
+          <p class="authors"><b>Kovi MR</b>, Guevarra P, Thu S, Kragholm ETM, Pashapu AR, Nohr FH, Ferreira da Costa I, Steinkopf M, Gylstrøm KH, Amdahl H, Manishankar P, Alcantara JM, Windju S, Veerabagu M, Alsheikh M, Fjellheim S, Sobral RS, Rognli OA</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.2139/ssrn.6945436">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.2139/ssrn.6945436">Precipitation dominates timothy yield variation in Norwegian breeding trials: interpretable ensemble machine learning identifies climate-adaptive parental combinations</a></h3>
+          <p class="venue">SSRN preprint</p>
+          <p class="authors"><b>Kovi MR</b>, Haputhanthri AP, Amdahl H, Gylstrøm K, Marum P, Pashapu AR, Alsheikh M, Rognli OA</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="10.64898/2026.06.01.729298">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.64898/2026.06.01.729298">PhytoScan3D: an open-source Python pipeline for batch extraction of phenotypic traits from 3D point cloud files generated by multispectral plant phenotyping sensors</a></h3>
+          <p class="venue">bioRxiv preprint</p>
+          <p class="authors"><b>Kovi MR</b>, Candea Leite A, Lillemo M</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3>Gaussian process regression with uncertainty quantification enables early non-destructive genotype evaluation from PlantEye 3D time-series in barley</h3>
+          <p class="venue">Submitted manuscript</p>
+          <p class="authors"><b>Kovi MR</b>, Laranjeira S, Pashapu AR, Lin M, Ijaz M, Sobral RS, Candea Leite A, Rognli OA, Lillemo M</p>
+          <p class="role">First and corresponding author</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="group" id="earlier" aria-labelledby="head-earlier">
+    <div class="group-title"><h2 id="head-earlier">Earlier preprints</h2><span class="total">2</span></div>
+    <ul class="records">
+      <li class="record" data-year="2024" data-doi="10.2139/ssrn.4849508">
+        <div class="year">2024</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.2139/ssrn.4849508">UV-C light modulates germination dynamics without stimulating adaptive melanin production in <i>Botrytis cinerea</i></a></h3>
+          <p class="venue">SSRN preprint</p>
+          <p class="authors">Turnbull C, Sobral RS, Difford GF, <b>Kovi MR</b></p>
+          
+        </div>
+      </li>
+      <li class="record" data-year="2021" data-doi="10.21203/rs.3.rs-786721/v1">
+        <div class="year">2021</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.21203/rs.3.rs-786721/v1">Comparison of different leaf preservation methods to obtain high quality DNA from enset (<i>Ensete ventricosum</i> (Welw.) Cheesman), a native and orphan food security crop in Ethiopia</a></h3>
+          <p class="venue">Research Square preprint</p>
+          <p class="authors">Haile AT, Johnsen SS, <b>Kovi MR</b>, Hvoslef-Eide T, Tesfaye B, Rognli OA</p>
+          
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="group" id="datasets" aria-labelledby="head-datasets">
+    <div class="group-title"><h2 id="head-datasets">Open datasets</h2><span class="total">3</span></div>
+    <ul class="records">
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Data</div>
+        <div class="citation">
+          <h3><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-4459">Perennial ryegrass during early infection by pink snow mould</a></h3>
+          <p class="venue">ArrayExpress · E-MTAB-4459</p>
+          
+          
+        </div>
+      </li>
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Data</div>
+        <div class="citation">
+          <h3><a href="https://www.ebi.ac.uk/gxa/experiments/E-MTAB-5117">Flower development in tetraploid red clover</a></h3>
+          <p class="venue">ArrayExpress · E-MTAB-5117 · RNA sequencing of Tripo and Lasang</p>
+          
+          
+        </div>
+      </li>
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Data</div>
+        <div class="citation">
+          <h3><a href="https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-13531">Freezing responses in timothy cultivars after field selection</a></h3>
+          <p class="venue">ArrayExpress · E-MTAB-13531</p>
+          
+          
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="group" id="tools" aria-labelledby="head-tools">
+    <div class="group-title"><h2 id="head-tools">Software &amp; databases</h2><span class="total">4</span></div>
+    <ul class="records">
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Tool</div>
+        <div class="citation">
+          <h3><a href="https://github.com/kovimallik/phytoscan3d">PhytoScan3D</a></h3>
+          <p class="venue">Open-source Python pipeline for extracting phenotypic traits from multispectral 3D point clouds.</p>
+          
+          
+        </div>
+      </li>
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Tool</div>
+        <div class="citation">
+          <h3><a href="https://doi.org/10.1093/database/baaa046">ForageGrassBase</a></h3>
+          <p class="venue">Genome database for meadow fescue. The linked paper describes the assemblies, annotations and database.</p>
+          
+          
+        </div>
+      </li>
+      <li class="record" data-year="2026" data-doi="">
+        <div class="year">2026</div>
+        <div class="citation">
+          <h3><a href="https://kovimallik.github.io/lolium-root-atlas/">Perennial ryegrass root atlas</a></h3>
+          <p class="venue">Single-nucleus gene expression across root cell states.</p>
+          
+          
+        </div>
+      </li>
+      <li class="record" data-year="" data-doi="">
+        <div class="year">Tool</div>
+        <div class="citation">
+          <h3>Lolium–Festuca comparative genome browser</h3>
+          <p class="venue">JBrowse 2 resource developed for the International Lolium–Festuca Pangenome Consortium.</p>
+          
+          
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer><div class="wrap foot"><a href="./index.html#publications">Back to profile</a><span>Updated November 2026</span></div></footer>
+<script>
+(() => {
+  const search = document.querySelector('#search');
+  const type = document.querySelector('#type');
+  const year = document.querySelector('#year');
+  const groups = Array.from(document.querySelectorAll('.group'));
+  const reset = document.querySelector('#reset');
+  const status = document.querySelector('#matches');
+  const empty = document.querySelector('#empty');
+  const normalize = value => value.toLowerCase().replace(/ø/g, 'o').replace(/æ/g, 'ae').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const records = groups.flatMap(group =>
+    Array.from(group.querySelectorAll('.record'), node => ({
+      node,
+      category: group.id,
+      year: node.dataset.year,
+      words: normalize(node.textContent + ' ' + node.dataset.doi),
+    }))
+  );
+
+  function update() {
+    const terms = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+    const counts = new Map();
+    let matches = 0;
+    for (const entry of records) {
+      const visible = (!type.value || type.value === entry.category)
+        && (!year.value || year.value === entry.year)
+        && terms.every(term => entry.words.includes(term));
+      entry.node.hidden = !visible;
+      if (visible) {
+        matches++;
+        counts.set(entry.category, (counts.get(entry.category) || 0) + 1);
+      }
+    }
+    for (const group of groups) {
+      const count = counts.get(group.id) || 0;
+      group.hidden = !count;
+      group.querySelector('.total').textContent = count;
+    }
+    status.textContent = matches === 1 ? '1 record' : matches + ' records';
+    empty.hidden = matches !== 0;
+    reset.hidden = !(terms.length || type.value || year.value);
+  }
+  search.addEventListener('input', update);
+  type.addEventListener('change', update);
+  year.addEventListener('change', update);
+  reset.addEventListener('click', () => {
+    search.value = '';
+    type.value = '';
+    year.value = '';
+    update();
+    search.focus();
+  });
+  document.querySelector('#controls').hidden = false;
+  document.querySelector('#control-status').hidden = false;
+  update();
+})();
+</script></body></html>
