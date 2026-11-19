@@ -1,21 +1,23 @@
 # Mallikarjuna Rao Kovi
 
-Personal academic portfolio of Mallikarjuna Rao Kovi, Department of Plant Sciences, Norwegian University of Life Sciences. [Visit the website](https://kovimallik.github.io/).
+[Academic website](https://kovimallik.github.io/) of Mallikarjuna Rao Kovi, Department of Plant Sciences, Norwegian University of Life Sciences.
 
-## Updating the portfolio
+## Maintaining the site
 
-The website is published by GitHub Pages from the root of the main branch. It uses static HTML, CSS and JavaScript and has no build step or external service dependency.
+GitHub Pages publishes static files from the root of the main branch. No build command is required.
 
-- Edit `index.html` for the research themes, funding ledger, teaching, supervision and career.
-- Edit `publications.html` to update the searchable bibliography. Maintain the category and year attributes on each entry.
-- Replace `Mallikarjuna-Rao-Kovi-CV.pdf` with the next public version of the CV.
-- Keep the update dates, landing-page figures, funding graphic and downloadable CV in step. Report the year, scope and role when adding a grant.
+| Language | Homepage | Bibliography | Downloadable CV |
+| --- | --- | --- | --- |
+| English | index.html | publications.html | Mallikarjuna-Rao-Kovi-CV.pdf |
+| Norwegian Bokmål | index-no.html | publications-no.html | Mallikarjuna-Rao-Kovi-CV-no.pdf |
+| Simplified Chinese | index-zh.html | publications-zh.html | Mallikarjuna-Rao-Kovi-CV-zh.pdf |
 
-The November 2026 record draws on the academic CV and publication list, institutional project pages, published studies and the [SustainPlant Group](https://www.sustainplantgroup.com/). The funding headline combines the budgets of projects led and the GE-Sustain work-package allocation. The two separately mentioned consortium budgets are excluded. Completed supervision includes both main and co-supervision.
+Edit the corresponding section in all three homepages when updating a grant, course or supervision count. The publication archives keep the original paper titles and DOIs. Their type and date fields drive the filters. Update the date on each affected page and download.
 
-## Images and type
+## Data and photographs
 
-- The [portrait](https://www.sustainplantgroup.com/images/web/kovi-headshot.jpg) and [field phenotyping photograph](https://www.sustainplantgroup.com/images/web/robot-field.jpg) are from SustainPlant Group.
-- The forage plots photograph is credited to Mallikarjuna Rao Kovi on the [NMBU ProteinSense project page](https://www.nmbu.no/en/research/projects/proteinsense).
-- The ryegrass plate is an AI-generated editorial botanical illustration.
-- DM Sans and Instrument Serif are locally hosted and distributed under the SIL Open Font License. License notices are in `assets/fonts/`.
+- The academic record is dated November 2026. Funding combines project budgets and the GE-Sustain work-package allocation. Graduated students include main supervision and co-supervision.
+- The collaboration map shows selected project partners and journal papers linked to the country of a co-author’s institutional affiliation at publication. Kovi’s own affiliations are excluded from those counts. Papers can appear in several countries. Examples, project sources and DOI lists are provided in the country panels. Country outlines use public-domain [Natural Earth](https://www.naturalearthdata.com/) data.
+- The [NMBU portrait](https://www.nmbu.no/en/about/employees/mallikarjuna-rao-kovi) is by Håkon Sparre. The field plot photograph is by Mallikarjuna Rao Kovi, credited by [NMBU](https://www.nmbu.no/en/research/projects/proteinsense).
+- The [field phenotyping photograph](https://www.sustainplantgroup.com/images/web/robot-field.jpg) and [Qingdao conference photograph](https://www.sustainplantgroup.com/images/iftbc2026-talk.jpg) are from SustainPlant Group.
+- DM Sans and Instrument Serif are served locally under the SIL Open Font License. See the notices in assets/fonts.

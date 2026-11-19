@@ -1,0 +1,112 @@
+.network-section {
+  --network-line: #bdc9bd;
+  --network-ink: #183c2e;
+  --network-muted: #496055;
+  color: var(--network-ink);
+}
+.network-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 1fr);
+  align-items: end;
+  gap: 1.2rem 3rem;
+  margin-bottom: clamp(1.6rem, 3vw, 2.7rem);
+}
+.network-heading h2, .network-heading p { margin: 0; }
+.network-heading p { color: var(--network-muted); font-size: 1rem; line-height: 1.55; max-width: 50ch; }
+.network-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(16.5rem, .8fr);
+  gap: clamp(1.4rem, 3.4vw, 3.4rem);
+  align-items: start;
+}
+.network-atlas { min-width: 0; border-block: 1px solid var(--network-line); }
+.network-toolbar, .network-picker { display: flex; gap: .65rem; align-items: center; }
+.network-toolbar { padding: .55rem 0; flex-wrap: wrap; }
+.network-zoom { margin-left: auto; display: flex; gap: .12rem; padding: .16rem; background: #edf1ea; border-radius: 3px; }
+.network-zoom button, .network-section select {
+  font: 550 .9rem/1.4 var(--sans, sans-serif);
+  color: var(--network-ink);
+}
+.network-zoom button { border: 0; background: transparent; min-height: 2.25rem; padding: .38rem .72rem; border-radius: 2px; cursor: pointer; }
+.network-zoom button[aria-pressed="true"] { background: #2c513c; color: #fff; }
+.network-select-label, .network-picker label { font-size: .86rem; font-weight: 600; color: var(--network-muted); }
+.network-section select {
+  border: 1px solid var(--network-line);
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23345241' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right .65rem center;
+  appearance: none;
+  min-height: 2.5rem;
+  padding: .36rem 1.9rem .36rem .65rem;
+  border-radius: 2px;
+  max-width: 100%;
+}
+.network-figure { margin: 0; }
+.network-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.95;
+  overflow: hidden;
+  background: #f1f5ef;
+  border-block: 1px solid #dce4d9;
+}
+.network-map a { fill: #577f63; stroke: #fff; stroke-width: .6; cursor: pointer; outline: none; }
+.network-map a:hover, .network-map a:focus-visible, .network-map a[aria-current="true"] { fill: #153f30; }
+.network-map a:focus-visible path { stroke: #af5d1d; stroke-width: 2; }
+.network-map a[aria-current="true"] path { stroke: #163e2b; }
+.network-marker { fill: #224a32; stroke: #fff; stroke-width: .9; }
+.network-map a[aria-current="true"] .network-marker,
+.network-map a:focus-visible .network-marker { fill: #b25a29; stroke: #fff; stroke-width: 1.4; }
+.network-map[data-zoom="europe"] .network-marker { r: .75; }
+.network-map .network-unavailable { visibility: hidden; }
+.network-figure figcaption {
+  display: flex; flex-wrap: wrap; gap: .38rem 1rem; align-items: center;
+  margin: .67rem 0; font: 450 .78rem/1.45 var(--sans, sans-serif); color: var(--network-muted);
+}
+.network-key { display: inline-flex; gap: .35rem; align-items: center; }
+.network-key i { width: .7rem; height: .7rem; border: 1px solid #476d52; background: #577f63; }
+.network-key.is-selected i { background: #ad582a; border-color: #8c4223; border-radius: 50%; }
+.network-credit { margin-left: auto; }
+.network-section a { text-decoration-thickness: 1px; text-underline-offset: .16em; }
+.network-section a:hover { text-decoration-thickness: 2px; }
+.network-evidence { min-width: 0; }
+.network-picker { justify-content: space-between; padding-bottom: .65rem; border-bottom: 1px solid var(--network-line); }
+.network-panels article { margin: 0; scroll-margin-top: 6rem; }
+.network-panels article h3 { font: 400 clamp(2.2rem,3.3vw,3.25rem)/1.08 var(--serif, Georgia, serif); letter-spacing: -.025em; margin: .95rem 0 .85rem; }
+.network-record { padding: .82rem 0; border-top: 1px solid #d1d9ce; }
+.network-record .network-record-kind { color: var(--network-muted); font-size: .78rem; font-weight: 650; line-height: 1.4; margin: 0 0 .34rem; }
+.network-record h4 { font: 650 1.06rem/1.46 var(--sans, sans-serif); margin: 0; }
+.network-record p { font-size: .94rem; margin: .25rem 0; color: var(--network-muted); line-height: 1.45; }
+.network-record a, .network-linked a { display: inline-block; max-width: 100%; color: #264f39; line-height: 1.45; font-size: .94rem; overflow-wrap: anywhere; }
+.network-record a { margin-top: .38rem; }
+.network-linked, .network-method { border-top: 1px solid var(--network-line); }
+.network-linked summary, .network-method summary { cursor: pointer; padding-block: .63rem; font: 600 .89rem/1.5 var(--sans, sans-serif); }
+.network-linked ol { padding-left: 1.45rem; margin: 0 0 .75rem; }
+.network-linked li { padding: .28rem 0; font-size: .85rem; }
+.network-linked a { font-size: .87rem; }
+.network-method { margin: 1.05rem 0 0; }
+.network-method p { margin: 0 0 .8rem; max-width: 75ch; font-size: .9rem; color: var(--network-muted); }
+.network-section [hidden] { display: none !important; }
+.network-section :is(button, select, summary, a):focus-visible { outline: 2px solid #a45526; outline-offset: 3px; }
+@media (max-width: 840px) {
+  .network-layout { grid-template-columns: minmax(0,1.25fr) minmax(15rem,.87fr); gap: 1rem; }
+  .network-heading { grid-template-columns: 1fr; gap: .7rem; }
+  .network-figure figcaption { gap: .3rem .7rem; }
+  .network-credit { margin-left: 0; }
+}
+@media (max-width: 690px) {
+  .network-layout { grid-template-columns: 1fr; gap: .9rem; }
+  .network-panels article h3 { margin: .8rem 0; }
+  .network-map { aspect-ratio: 1.8; }
+  .network-section select, .network-zoom button { min-height: 2.75rem; }
+}
+@media (max-width: 400px) {
+  .network-toolbar { gap: .3rem; }
+  .network-select-label { width: 100%; }
+  .network-zoom button { padding-inline: .6rem; }
+}
+@media print {
+  .network-heading, .network-layout { display: block; }
+  .network-toolbar, .network-picker, .network-method, .network-linked { display: none !important; }
+  .network-section article[data-network-card][hidden], .network-section .network-record[hidden] { display: block !important; }
+  .network-panels article { break-inside: avoid; }
+}
